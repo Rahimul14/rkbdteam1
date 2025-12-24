@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রক্তকণা ব্লাড ডোনার সোসাইটি বাংলাদেশ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #e53935;
+            --primary-dark: #c62828;
+            --secondary: #1a237e;
+            --light: #f5f5f5;
+            --dark: #222222;
+            --gray: #666666;
+            --success: #43a047;
+            --warning: #ff9800;
+            --danger: #e53935;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== PAGE NAVIGATION ===== */
+        .page {
+            display: none;
+            min-height: 100vh;
+            animation: fadeIn 0.3s ease;
+            position: relative;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .landing-header {
+            background: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3px;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .landing-nav {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .landing-nav li {
+            position: relative;
+        }
+
+        .landing-nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .landing-nav a:hover {
+            background: rgba(229, 57, 53, 0.1);
+            color: var(--primary);
+        }
+
+        .landing-nav a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 16px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features {
+            padding: 100px 5%;
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            color: var(--dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 40px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* ===== FORM STYLES ===== */
+        .form-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .form-header {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .form-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .form-body {
+            padding: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .success-message {
+            background: rgba(67, 160, 71, 0.1);
+            border: 2px solid var(--success);
+            color: var(--success);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: none;
+        }
+
+        /* ===== TABLE STYLES ===== */
+        .table-container {
+            overflow-x: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 20px;
+            text-align: left;
+        }
+
+        td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background: #f9f9f9;
+        }
+
+        /* ===== BLOOD INVENTORY ===== */
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .blood-card {
+            background: white;
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .blood-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .blood-card h3 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .blood-card p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .blood-level {
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .blood-fill {
+            height: 100%;
+            border-radius: 15px;
+            transition: width 1.5s ease;
+        }
+
+        .blood-fill.low { background: var(--danger); }
+        .blood-fill.medium { background: var(--warning); }
+        .blood-fill.high { background: var(--success); }
+
+        /* ===== ADMIN DASHBOARD ===== */
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: var(--primary);
+            color: white;
+            padding: 30px 0;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .menu li {
+            margin-bottom: 5px;
+        }
+
+        .menu a {
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .menu a:hover, .menu a.active {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .stat-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .stat-info p {
+            color: var(--gray);
+        }
+
+        /* ===== BUTTON STYLES ===== */
+        .btn {
+            padding: 12px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-success {
+            background: var(--success);
+        }
+
+        .btn-danger {
+            background: var(--danger);
+        }
+
+        /* ===== MODAL STYLES ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 30px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 50px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .cta-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .landing-header {
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            .landing-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .inventory-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .hidden { display: none; }
+        .text-center { text-align: center; }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-30 { margin-bottom: 30px; }
+        .mt-30 { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <!-- ===== LANDING PAGE ===== -->
+    <div id="landing-page" class="page active">
+        <header class="landing-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>রক্তকণা ব্লাড ডোনার সোসাইটি</h1>
+                    <p>Roktokona Blood Donor Society Bangladesh</p>
+                </div>
+            </div>
+            <ul class="landing-nav">
+                <li><a href="#landing" class="active" data-page="landing-page">
+                    <i class="fas fa-home"></i> হোম
+                </a></li>
+                <li><a href="#about" data-page="about-page">
+                    <i class="fas fa-info-circle"></i> সম্পর্কে
+                </a></li>
+                <li><a href="#register" data-page="register-page">
+                    <i class="fas fa-user-plus"></i> রেজিস্টার
+                </a></li>
+                <li><a href="#inventory" data-page="inventory-page">
+                    <i class="fas fa-tint"></i> রক্তের মজুদ
+                </a></li>
+                <li><a href="#dashboard" data-page="dashboard-page">
+                    <i class="fas fa-chart-line"></i> ড্যাশবোর্ড
+                </a></li>
+                <li><a href="#admin" data-page="admin-page">
+                    <i class="fas fa-user-shield"></i> অ্যাডমিন
+                </a></li>
+            </ul>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>এক ফোঁটা রক্ত — একটি জীবন বাঁচান</h1>
+                <p class="hero-tagline">
+                    আপনার রক্ত, অন্যের জীবনের আশা। রক্তদানের মাধ্যমে গড়ে উঠুক ভ্রাতৃত্বের বন্ধন।
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" data-page="register-page">
+                        <i class="fas fa-heart"></i> রক্তদাতা হন
+                    </button>
+                    <button class="btn-secondary" data-page="inventory-page">
+                        <i class="fas fa-search"></i> রক্তের স্টক দেখুন
+                    </button>
+                </div>
+                
+                <div class="quick-stats mt-30">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalDonorsCount">0</h3>
+                                <p>মোট রক্তদাতা</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="nidVerifiedCount">0</h3>
+                                <p>NID ভেরিফাইড</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="mostCommonBlood">O+</h3>
+                                <p>সবচেয়ে কমন গ্রুপ</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="recentDonors">0</h3>
+                                <p>সপ্তাহে নতুন</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="rkbd.png" alt="">
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>কেন রক্ত দিবেন?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>জীবন বাঁচান</h3>
+                    <p>আপনার একটি ডোনেশন তিনটি জীবন বাঁচাতে পারে। দুর্ঘটনা, অপারেশন, ক্যান্সার রোগীসহ বিভিন্ন ক্ষেত্রে রক্তের প্রয়োজন হয়।</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>নিরাপদ প্রক্রিয়া</h3>
+                    <p>রক্তদান সম্পূর্ণ নিরাপদ। স্টেরাইল সরঞ্জাম ও প্রশিক্ষিত মেডিকেল স্টাফ দ্বারা পরিচালিত হয়। পুরো প্রক্রিয়ায় ৪৫ মিনিটের বেশি সময় লাগে না।</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>সামাজিক দায়িত্ব</h3>
+                    <p>সমাজের প্রতি আপনার দায়িত্ব পালন করুন। রক্তদানের মাধ্যমে সম্প্রীতি ও ভ্রাতৃত্বের বন্ধন শক্তিশালী হয়।</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>রক্তকণা সম্পর্কে</h4>
+                    <p>মানবতার সেবায় নিবেদিত একটি স্বেচ্ছাসেবী সংগঠন। রক্তের অভাবে যেন কেউ প্রাণ না হারায় সেই লক্ষ্যে কাজ করে যাচ্ছি।</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>দ্রুত লিংক</h4>
+                    <ul>
+                        <li><a href="#landing" data-page="landing-page">হোম</a></li>
+                        <li><a href="#register" data-page="register-page">রেজিস্টার</a></li>
+                        <li><a href="#inventory" data-page="inventory-page">রক্তের স্টক</a></li>
+                        <li><a href="#dashboard" data-page="dashboard-page">ড্যাশবোর্ড</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> নওগাঁ পলিটেকনিক ইনস্টিটিউট, নওগাঁ</li>
+                        <li><i class="fas fa-phone"></i> +৮৮০ ১৭১১-২২৩৩৪৪</li>
+                        <li><i class="fas fa-envelope"></i> info@roktokona.org</li>
+                        <li><i class="fas fa-clock"></i> ২৪/৭ সেবা</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© ২০২৪ রক্তকণা ব্লাড ডোনার সোসাইটি বাংলাদেশ | Developed by CST Team-1</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ===== REGISTRATION PAGE ===== -->
+    <div id="register-page" class="page">
+        <header class="landing-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>রক্তদাতা নিবন্ধন</h1>
+                    <p>রক্তদাতা হিসেবে নিবন্ধন করুন</p>
+                </div>
+            </div>
+            <ul class="landing-nav">
+                <li><a href="#landing" data-page="landing-page">
+                    <i class="fas fa-home"></i> হোম
+                </a></li>
+                <li><a href="#about" data-page="about-page">
+                    <i class="fas fa-info-circle"></i> সম্পর্কে
+                </a></li>
+                <li><a href="#register" class="active" data-page="register-page">
+                    <i class="fas fa-user-plus"></i> রেজিস্টার
+                </a></li>
+                <li><a href="#inventory" data-page="inventory-page">
+                    <i class="fas fa-tint"></i> রক্তের মজুদ
+                </a></li>
+                <li><a href="#dashboard" data-page="dashboard-page">
+                    <i class="fas fa-chart-line"></i> ড্যাশবোর্ড
+                </a></li>
+                <li><a href="#admin" data-page="admin-page">
+                    <i class="fas fa-user-shield"></i> অ্যাডমিন
+                </a></li>
+            </ul>
+        </header>
+        
+        <div class="form-container">
+            <div class="form-header">
+                <h2>রক্তদাতা নিবন্ধন ফর্ম</h2>
+                <p>আপনার তথ্য প্রদান করুন এবং একজন জীবনদাতা হোন</p>
+            </div>
+            
+            <div class="form-body">
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    ধন্যবাদ! রক্তদাতা হিসেবে নিবন্ধন সম্পন্ন হয়েছে।
+                </div>
+                
+                <form id="donorRegistrationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">
+                                <i class="fas fa-user"></i> প্রথম নাম
+                            </label>
+                            <input type="text" id="firstName" class="form-control" 
+                                   placeholder="আপনার প্রথম নাম" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">
+                                <i class="fas fa-user"></i> শেষ নাম
+                            </label>
+                            <input type="text" id="lastName" class="form-control" 
+                                   placeholder="আপনার শেষ নাম" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> ইমেইল
+                            </label>
+                            <input type="email" id="email" class="form-control" 
+                                   placeholder="example@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i> ফোন নম্বর
+                            </label>
+                            <input type="tel" id="phone" class="form-control" 
+                                   placeholder="+৮৮০ ১XXX-XXXXXX" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob">
+                                <i class="fas fa-calendar"></i> জন্ম তারিখ
+                            </label>
+                            <input type="date" id="dob" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gender">
+                                <i class="fas fa-venus-mars"></i> লিঙ্গ
+                            </label>
+                            <select id="gender" class="form-control" required>
+                                <option value="">লিঙ্গ নির্বাচন করুন</option>
+                                <option value="male">পুরুষ</option>
+                                <option value="female">মহিলা</option>
+                                <option value="other">অন্যান্য</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nidNumber">
+                                <i class="fas fa-id-card"></i> NID নম্বর (ঐচ্ছিক)
+                            </label>
+                            <input type="text" id="nidNumber" class="form-control" 
+                                   placeholder="১৭ ডিজিটের NID নম্বর" maxlength="17">
+                            <small style="color: var(--gray); display: block; margin-top: 5px;">
+                                NID দিলে ভেরিফিকেশন সুবিধা পাবেন
+                            </small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bloodType">
+                                <i class="fas fa-tint"></i> রক্তের গ্রুপ
+                            </label>
+                            <select id="bloodType" class="form-control" required>
+                                <option value="">রক্তের গ্রুপ নির্বাচন করুন</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">
+                                <i class="fas fa-city"></i> শহর
+                            </label>
+                            <input type="text" id="city" class="form-control" 
+                                   placeholder="আপনার শহরের নাম" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zipCode">
+                                <i class="fas fa-map-pin"></i> জিপ কোড
+                            </label>
+                            <input type="text" id="zipCode" class="form-control" 
+                                   placeholder="আপনার জিপ কোড" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">
+                            <i class="fas fa-map-marker-alt"></i> পূর্ণ ঠিকানা
+                        </label>
+                        <textarea id="address" class="form-control" rows="3" 
+                                  placeholder="বাড়ি নম্বর, রাস্তা, এলাকা" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; gap: 10px;">
+                            <input type="checkbox" id="consent" required>
+                            <span>
+                                আমি নিশ্চিত করছি যে প্রদত্ত সকল তথ্য সঠিক এবং রক্তদানের প্রয়োজনে যোগাযোগের জন্য সম্মত আছি।
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-heart"></i> রক্তদাতা হিসেবে নিবন্ধন করুন
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ADMIN PAGE ===== -->
+    <div id="admin-page" class="page">
+        <div class="admin-container">
+            <div class="sidebar">
+                <div class="admin-logo" style="padding: 30px 25px;">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h4 style="color: white;">অ্যাডমিন ড্যাশবোর্ড</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="menu">
+                    <li><a href="#" class="active" data-admin="dashboard">
+                        <i class="fas fa-chart-bar"></i> ড্যাশবোর্ড
+                    </a></li>
+                    <li><a href="#" data-admin="donors">
+                        <i class="fas fa-users"></i> রক্তদাতারা
+                    </a></li>
+                    <li><a href="#" data-admin="nid">
+                        <i class="fas fa-id-card"></i> NID ভেরিফিকেশন
+                    </a></li>
+                    <li><a href="#" data-admin="inventory">
+                        <i class="fas fa-tint"></i> রক্ত মজুদ
+                    </a></li>
+                    <li><a href="#landing" data-page="landing-page">
+                        <i class="fas fa-sign-out-alt"></i> সাইটে ফিরুন
+                    </a></li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+                <div class="admin-header">
+                    <h2>অ্যাডমিন ড্যাশবোর্ড</h2>
+                    <div class="user-info">
+                        <img src="tasin.jpg" 
+                             alt="Admin" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div>
+                            <span>অ্যাডমিন ইউজার</span>
+                            <br>
+                            <small style="color: var(--gray);">সুপার অ্যাডমিন</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="adminDashboard" class="admin-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="adminTotalDonors">0</h3>
+                                <p>মোট রক্তদাতা</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="adminNidVerified">0</h3>
+                                <p>NID ভেরিফাইড</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="adminMostCommonBlood">O+</h3>
+                                <p>সর্বাধিক গ্রুপ</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="adminLowStock">0</h3>
+                                <p>কম মজুদ</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; border-radius: 20px; padding: 35px; margin-top: 40px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <h3>সদ্য নিবন্ধিত রক্তদাতা</h3>
+                            <button class="btn" id="refreshAdmin">
+                                <i class="fas fa-sync-alt"></i> রিফ্রেশ
+                            </button>
+                        </div>
+                        <div class="table-container">
+                            <table id="adminDonorsTable">
+                                <thead>
+                                    <tr>
+                                        <th>নাম</th>
+                                        <th>রক্তের গ্রুপ</th>
+                                        <th>যোগাযোগ</th>
+                                        <th>NID স্ট্যাটাস</th>
+                                        <th>শহর</th>
+                                        <th>কার্যক্রম</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="adminDonors" class="admin-section hidden">
+                    <div style="background: white; border-radius: 20px; padding: 35px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <h3>সমস্ত রক্তদাতা</h3>
+                            <div>
+                                <button class="btn btn-success" id="exportCSV">
+                                    <i class="fas fa-download"></i> CSV এক্সপোর্ট
+                                </button>
+                                <button class="btn" id="refreshAllDonors" style="margin-left: 10px;">
+                                    <i class="fas fa-sync-alt"></i> রিফ্রেশ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table id="allDonorsTable">
+                                <thead>
+                                    <tr>
+                                        <th>নাম</th>
+                                        <th>রক্তের গ্রুপ</th>
+                                        <th>ইমেইল</th>
+                                        <th>ফোন</th>
+                                        <th>NID স্ট্যাটাস</th>
+                                        <th>নিবন্ধন তারিখ</th>
+                                        <th>কার্যক্রম</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- All donors will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="adminNid" class="admin-section hidden">
+                    <div style="background: white; border-radius: 20px; padding: 35px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <h3>NID ভেরিফিকেশন</h3>
+                            <button class="btn" id="refreshNid">
+                                <i class="fas fa-sync-alt"></i> রিফ্রেশ
+                            </button>
+                        </div>
+                        
+                        <div id="pendingVerifications">
+                            <h4 style="color: var(--warning); margin-bottom: 20px;">
+                                <i class="fas fa-clock"></i> পেন্ডিং ভেরিফিকেশন
+                            </h4>
+                            <div class="table-container">
+                                <table id="pendingVerificationsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>নাম</th>
+                                            <th>রক্তের গ্রুপ</th>
+                                            <th>NID নম্বর</th>
+                                            <th>নিবন্ধন তারিখ</th>
+                                            <th>কার্যক্রম</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Pending verifications will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== BLOOD INVENTORY PAGE ===== -->
+    <div id="inventory-page" class="page">
+        <header class="landing-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>রক্তের মজুদ অবস্থা</h1>
+                    <p>বর্তমান রক্তের প্রাপ্যতা</p>
+                </div>
+            </div>
+            <ul class="landing-nav">
+                <li><a href="#landing" data-page="landing-page">
+                    <i class="fas fa-home"></i> হোম
+                </a></li>
+                <li><a href="#about" data-page="about-page">
+                    <i class="fas fa-info-circle"></i> সম্পর্কে
+                </a></li>
+                <li><a href="#register" data-page="register-page">
+                    <i class="fas fa-user-plus"></i> রেজিস্টার
+                </a></li>
+                <li><a href="#inventory" class="active" data-page="inventory-page">
+                    <i class="fas fa-tint"></i> রক্তের মজুদ
+                </a></li>
+                <li><a href="#dashboard" data-page="dashboard-page">
+                    <i class="fas fa-chart-line"></i> ড্যাশবোর্ড
+                </a></li>
+                <li><a href="#admin" data-page="admin-page">
+                    <i class="fas fa-user-shield"></i> অ্যাডমিন
+                </a></li>
+            </ul>
+        </header>
+        
+        <div style="max-width: 1400px; margin: 40px auto; padding: 0 30px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;">রক্তের মজুদ অবস্থা</h2>
+                <p style="color: var(--gray); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    বর্তমানে আমাদের ব্লাড ব্যাংকে উপলব্ধ রক্তের গ্রুপসমূহ
+                </p>
+            </div>
+            
+            <div class="inventory-grid" id="bloodInventoryGrid">
+                <!-- Blood cards will be loaded dynamically -->
+            </div>
+            
+            <div style="background: white; border-radius: 20px; padding: 35px 40px; margin-bottom: 50px; border-left: 5px solid var(--danger);">
+                <h3 style="color: var(--danger); margin-bottom: 20px;">
+                    <i class="fas fa-exclamation-triangle"></i> জরুরি রক্তের আবেদন
+                </h3>
+                <p id="urgentRequestMessage" style="margin-bottom: 25px; font-size: 1.1rem;">
+                    রক্তের মজুদ বিশ্লেষণ করা হচ্ছে...
+                </p>
+                <div>
+                    <button class="btn btn-danger" data-page="register-page">
+                        <i class="fas fa-heart"></i> রক্তদাতা হন
+                    </button>
+                    <button class="btn" id="refreshInventory" style="margin-left: 15px;">
+                        <i class="fas fa-sync-alt"></i> আপডেট
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PUBLIC DASHBOARD PAGE ===== -->
+    <div id="dashboard-page" class="page">
+        <header class="landing-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>পাবলিক ড্যাশবোর্ড</h1>
+                    <p>রক্তদাতাদের তথ্য</p>
+                </div>
+            </div>
+            <ul class="landing-nav">
+                <li><a href="#landing" data-page="landing-page">
+                    <i class="fas fa-home"></i> হোম
+                </a></li>
+                <li><a href="#about" data-page="about-page">
+                    <i class="fas fa-info-circle"></i> সম্পর্কে
+                </a></li>
+                <li><a href="#register" data-page="register-page">
+                    <i class="fas fa-user-plus"></i> রেজিস্টার
+                </a></li>
+                <li><a href="#inventory" data-page="inventory-page">
+                    <i class="fas fa-tint"></i> রক্তের মজুদ
+                </a></li>
+                <li><a href="#dashboard" class="active" data-page="dashboard-page">
+                    <i class="fas fa-chart-line"></i> ড্যাশবোর্ড
+                </a></li>
+                <li><a href="#admin" data-page="admin-page">
+                    <i class="fas fa-user-shield"></i> অ্যাডমিন
+                </a></li>
+            </ul>
+        </header>
+        
+        <div style="max-width: 1400px; margin: 40px auto; padding: 0 30px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;">পাবলিক রক্তদাতা ড্যাশবোর্ড</h2>
+                <p style="color: var(--gray); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                    নিবন্ধিত রক্তদাতাদের দেখুন এবং তথ্য আপডেট করুন
+                </p>
+            </div>
+            
+            <div style="background: white; border-radius: 20px; padding: 40px; margin-bottom: 40px;">
+                <h3 style="margin-bottom: 30px;">রক্তদাতা পরিসংখ্যান</h3>
+                <div class="stats-grid">
+                    <div class="stat-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 30px 25px; border-radius: 15px;">
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px;" id="publicTotalDonors">0</div>
+                        <div>মোট রক্তদাতা</div>
+                    </div>
+                    <div class="stat-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 30px 25px; border-radius: 15px;">
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px;" id="publicCommonBlood">O+</div>
+                        <div>সর্বাধিক গ্রুপ</div>
+                    </div>
+                    <div class="stat-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 30px 25px; border-radius: 15px;">
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px;" id="publicRecentDonors">0</div>
+                        <div>সপ্তাহে নতুন</div>
+                    </div>
+                    <div class="stat-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 30px 25px; border-radius: 15px;">
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px;" id="publicNidVerified">0</div>
+                        <div>NID ভেরিফাইড</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: white; border-radius: 20px; padding: 35px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                    <h3>নিবন্ধিত রক্তদাতারা</h3>
+                    <div>
+                        <button class="btn" id="refreshPublic">
+                            <i class="fas fa-sync-alt"></i> ডেটা রিফ্রেশ
+                        </button>
+                        <button class="btn btn-success" data-page="register-page" style="margin-left: 15px;">
+                            <i class="fas fa-user-plus"></i> নতুন রেজিস্টার
+                        </button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="publicDonorsTable">
+                        <thead>
+                            <tr>
+                                <th>রক্তদাতার নাম</th>
+                                <th>রক্তের গ্রুপ</th>
+                                <th>যোগাযোগ</th>
+                                <th>NID স্ট্যাটাস</th>
+                                <th>অবস্থান</th>
+                                <th>নিবন্ধন তারিখ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Donors will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT PAGE ===== -->
+    <div id="about-page" class="page">
+        <header class="landing-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>আমাদের সম্পর্কে</h1>
+                    <p>রক্তকণার ইতিহাস ও লক্ষ্য</p>
+                </div>
+            </div>
+            <ul class="landing-nav">
+                <li><a href="#landing" data-page="landing-page">
+                    <i class="fas fa-home"></i> হোম
+                </a></li>
+                <li><a href="#about" class="active" data-page="about-page">
+                    <i class="fas fa-info-circle"></i> সম্পর্কে
+                </a></li>
+                <li><a href="#register" data-page="register-page">
+                    <i class="fas fa-user-plus"></i> রেজিস্টার
+                </a></li>
+                <li><a href="#inventory" data-page="inventory-page">
+                    <i class="fas fa-tint"></i> রক্তের মজুদ
+                </a></li>
+                <li><a href="#dashboard" data-page="dashboard-page">
+                    <i class="fas fa-chart-line"></i> ড্যাশবোর্ড
+                </a></li>
+                <li><a href="#admin" data-page="admin-page">
+                    <i class="fas fa-user-shield"></i> অ্যাডমিন
+                </a></li>
+            </ul>
+        </header>
+        
+        <div style="max-width: 1000px; margin: 50px auto; padding: 50px; background: white; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 3rem; color: var(--primary); text-align: center; margin-bottom: 40px;">রক্তকণা ব্লাড ডোনার সোসাইটি বাংলাদেশ</h2>
+            
+            <p style="margin-bottom: 25px; line-height: 1.8; font-size: 1.1rem;">
+                আমরা নওগাঁ পলিটেকনিক ইনস্টিটিউটের শিক্ষার্থীদের উদ্যোগে গঠিত রক্তকণা ব্লাড ডোনার সোসাইটি বাংলাদেশ। 
+                মানবতার কল্যাণে রক্তদান একটি মহৎ কাজ—এই বিশ্বাস থেকে আমাদের এই যাত্রা শুরু।
+                আমাদের লক্ষ্য হলো জরুরি মুহূর্তে রোগীদের জন্য দ্রুত রক্তদাতা খুঁজে দেওয়া এবং 
+                শিক্ষার্থী ও সাধারণ মানুষকে রক্তদানের গুরুত্ব সম্পর্কে সচেতন করা।
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin: 40px 0;">
+                <div style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; border-left: 5px solid var(--primary);">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;">আমাদের লক্ষ্য</h3>
+                    <p style="line-height: 1.7;">
+                        ১. জরুরি মুহূর্তে রোগীদের জন্য দ্রুত রক্তদাতা খুঁজে দেওয়া<br>
+                        ২. শিক্ষার্থী ও সাধারণ মানুষকে রক্তদানের গুরুত্ব সম্পর্কে সচেতন করা<br>
+                        ৩. রক্তদানের মাধ্যমে মানবিক মূল্যবোধ, ভ্রাতৃত্ব ও সহযোগিতা বৃদ্ধি করা
+                    </p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; border-left: 5px solid var(--primary);">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;">আমাদের স্বপ্ন</h3>
+                    <p style="line-height: 1.7;">
+                        "এক ফোঁটা রক্ত বাঁচাতে পারে একটি জীবন"—এই স্লোগানকে ধারণ করে আমরা চাই রক্তের অভাবে যেন কেউ প্রাণ না হারায়। 
+                        আমরা বিশ্বাস করি—"মানুষের জন্য মানুষের রক্ত, মানবতার জন্য একটি ছোট উদ্যোগ।"
+                    </p>
+                </div>
+            </div>
+            
+            <h3 style="color: var(--primary); margin: 40px 0 20px 0; font-size: 1.8rem;">আমাদের কার্যক্রম</h3>
+            <ul style="margin-left: 30px; margin-bottom: 30px;">
+                <li style="margin-bottom: 15px; line-height: 1.7;">নিয়মিত রক্তদাতা সংগ্রহ ও জরুরি সময়ে রক্তদাতা ও গ্রহীতার মধ্যে যোগাযোগ স্থাপন</li>
+                <li style="margin-bottom: 15px; line-height: 1.7;">ক্যাম্পেইন, সেমিনার ও সচেতনতামূলক কার্যক্রম আয়োজন</li>
+                <li style="margin-bottom: 15px; line-height: 1.7;">শিক্ষার্থীদের মধ্যে সামাজিক সেবার মনোভাব গড়ে তোলা</li>
+                <li style="margin-bottom: 15px; line-height: 1.7;">রক্তদান শিবিরের আয়োজন</li>
+                <li style="margin-bottom: 15px; line-height: 1.7;">রক্তের গ্রুপ ভিত্তিক ডাটাবেস তৈরি ও রক্ষণাবেক্ষণ</li>
+                <li style="margin-bottom: 15px; line-height: 1.7;">জরুরি রক্তের প্রয়োজনে ২৪/৭ হেল্পলাইন সেবা</li>
+            </ul>
+            
+            <div style="display: flex; justify-content: center; gap: 20px; margin-top: 40px;">
+                <button class="btn-primary" data-page="register-page">
+                    <i class="fas fa-heart"></i> রক্তদাতা হন
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODALS ===== -->
+    <div class="modal-overlay" id="nidVerificationModal">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h3>NID ভেরিফিকেশন</h3>
+                <button onclick="closeModal('nidVerificationModal')" style="background: none; border: none; font-size: 28px; cursor: pointer; color: var(--gray);">&times;</button>
+            </div>
+            
+            <div class="form-group">
+                <label>নির্বাচিত রক্তদাতা</label>
+                <input type="text" id="selectedDonorName" class="form-control" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label>NID নম্বর</label>
+                <input type="text" id="verificationNidNumber" class="form-control" 
+                       placeholder="১৭ ডিজিটের NID নম্বর" maxlength="17">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>পূর্ণ নাম (NID অনুযায়ী)</label>
+                    <input type="text" id="verificationFullName" class="form-control" 
+                           placeholder="NID তে থাকা পূর্ণ নাম">
+                </div>
+                <div class="form-group">
+                    <label>জন্ম তারিখ</label>
+                    <input type="date" id="verificationDob" class="form-control">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>পিতার নাম</label>
+                    <input type="text" id="verificationFatherName" class="form-control" 
+                           placeholder="পিতার পূর্ণ নাম">
+                </div>
+                <div class="form-group">
+                    <label>মাতার নাম</label>
+                    <input type="text" id="verificationMotherName" class="form-control" 
+                           placeholder="মাতার পূর্ণ নাম">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>স্থায়ী ঠিকানা</label>
+                <textarea id="verificationAddress" class="form-control" rows="3" 
+                          placeholder="NID তে থাকা স্থায়ী ঠিকানা"></textarea>
+            </div>
+            
+            <div style="display: flex; justify-content: flex-end; gap: 15px; margin-top: 30px;">
+                <button class="btn" onclick="closeModal('nidVerificationModal')">
+                    <i class="fas fa-times"></i> বাতিল
+                </button>
+                <button class="btn btn-success" onclick="submitNidVerification()">
+                    <i class="fas fa-check-circle"></i> ভেরিফাই করুন
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="deleteConfirmationModal">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h3>নিশ্চিতকরণ</h3>
+                <button onclick="closeModal('deleteConfirmationModal')" style="background: none; border: none; font-size: 28px; cursor: pointer; color: var(--gray);">&times;</button>
+            </div>
+            
+            <p id="deleteMessage">আপনি কি নিশ্চিত যে এই রক্তদাতাকে মুছে ফেলতে চান?</p>
+            <p style="color: var(--danger); margin-top: 15px;">
+                <i class="fas fa-exclamation-triangle"></i> এই কাজটি পূর্বাবস্থায় ফিরিয়ে আনা যাবে না।
+            </p>
+            
+            <div style="display: flex; justify-content: flex-end; gap: 15px; margin-top: 30px;">
+                <button class="btn" onclick="closeModal('deleteConfirmationModal')">
+                    <i class="fas fa-times"></i> বাতিল
+                </button>
+                <button class="btn btn-danger" onclick="confirmDelete()">
+                    <i class="fas fa-trash"></i> মুছে ফেলুন
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== NO RELOAD, NO CRASH VERSION =====
+        // সম্পূর্ণ Frontend Only Solution
+        
+        // Data Storage
+        let donorsData = JSON.parse(localStorage.getItem('bloodDonors')) || [];
+        let currentDonorId = null;
+        let currentVerificationDonor = null;
+        
+        // Initialize with sample data if empty
+        function initializeData() {
+            if (donorsData.length === 0) {
+                donorsData = [
+                    {
+                        id: 1,
+                        firstName: "আব্দুল",
+                        lastName: "করিম",
+                        email: "abdul.karim@email.com",
+                        phone: "+880 1711-223344",
+                        dob: "1990-05-15",
+                        bloodType: "O+",
+                        gender: "male",
+                        address: "১২৩ মেইন রোড, নওগাঁ",
+                        city: "নওগাঁ",
+                        zipCode: "6500",
+                        registrationDate: "২০২৪-০১-১৫",
+                        nidVerified: true,
+                        nidNumber: "12345678901234567",
+                        nidData: {
+                            fullName: "আব্দুল করিম",
+                            fatherName: "মোঃ রহিম",
+                            motherName: "আয়েশা বেগম",
+                            permanentAddress: "১২৩ মেইন রোড, নওগাঁ",
+                            dob: "1990-05-15"
+                        }
+                    },
+                    {
+                        id: 2,
+                        firstName: "সালমা",
+                        lastName: "আক্তার",
+                        email: "salmabegum@gmail.com",
+                        phone: "+880 1811-334455",
+                        dob: "1995-08-22",
+                        bloodType: "A+",
+                        gender: "female",
+                        address: "৪৫৬ ওক এভিনিউ, নওগাঁ",
+                        city: "নওগাঁ",
+                        zipCode: "6500",
+                        registrationDate: "২০২৪-০২-১০",
+                        nidVerified: false,
+                        nidNumber: "23456789012345678",
+                        nidData: null
+                    },
+                    {
+                        id: 3,
+                        firstName: "মোঃ",
+                        lastName: "রফিক",
+                        email: "rafiq.islam@email.com",
+                        phone: "+880 1911-445566",
+                        dob: "1988-12-10",
+                        bloodType: "B+",
+                        gender: "male",
+                        address: "৭৮৯ পাইন রোড, নওগাঁ",
+                        city: "নওগাঁ",
+                        zipCode: "6500",
+                        registrationDate: "২০২৪-০৩-০৫",
+                        nidVerified: true,
+                        nidNumber: "34567890123456789",
+                        nidData: {
+                            fullName: "মোহাম্মদ রফিক",
+                            fatherName: "মোঃ করিম",
+                            motherName: "রহিমা বেগম",
+                            permanentAddress: "৭৮৯ পাইন রোড, নওগাঁ",
+                            dob: "1988-12-10"
+                        }
+                    }
+                ];
+                saveToLocalStorage();
+            }
+        }
+        
+        // Save to localStorage
+        function saveToLocalStorage() {
+            localStorage.setItem('bloodDonors', JSON.stringify(donorsData));
+        }
+        
+        // Page Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeData();
+            
+            // Navigation links
+            document.querySelectorAll('[data-page]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Admin navigation
+            document.querySelectorAll('[data-admin]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = this.getAttribute('data-admin');
+                    showAdminSection(section);
+                });
+            });
+            
+            // Buttons with data-page
+            document.querySelectorAll('button[data-page]').forEach(button => {
+                button.addEventListener('click', function() {
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Form submission
+            document.getElementById('donorRegistrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                registerDonor();
+            });
+            
+            // Refresh buttons
+            document.getElementById('refreshAdmin')?.addEventListener('click', updateAllData);
+            document.getElementById('refreshAllDonors')?.addEventListener('click', () => {
+                showAdminSection('donors');
+                updateAllData();
+            });
+            document.getElementById('refreshNid')?.addEventListener('click', () => {
+                showAdminSection('nid');
+                updateAllData();
+            });
+            document.getElementById('refreshInventory')?.addEventListener('click', updateAllData);
+            document.getElementById('refreshPublic')?.addEventListener('click', updateAllData);
+            document.getElementById('exportCSV')?.addEventListener('click', exportToCSV);
+            
+            // Initial data load
+            updateAllData();
+        });
+        
+        // Show page
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update navigation
+            document.querySelectorAll('.landing-nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Update data for the page
+            updatePageData(pageId);
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Show admin section
+        function showAdminSection(section) {
+            // Hide all sections
+            document.querySelectorAll('.admin-section').forEach(sec => {
+                sec.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(`admin${section.charAt(0).toUpperCase() + section.slice(1)}`).classList.remove('hidden');
+            
+            // Update admin navigation
+            document.querySelectorAll('.menu a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-admin') === section) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Update section data
+            updateAdminSectionData(section);
+        }
+        
+        // Update page data
+        function updatePageData(pageId) {
+            switch(pageId) {
+                case 'landing-page':
+                    updateLandingStats();
+                    break;
+                case 'dashboard-page':
+                    updatePublicDashboard();
+                    break;
+                case 'inventory-page':
+                    updateBloodInventory();
+                    break;
+                case 'admin-page':
+                    updateAdminDashboard();
+                    break;
+            }
+        }
+        
+        // Update all data
+        function updateAllData() {
+            updateLandingStats();
+            updatePublicDashboard();
+            updateBloodInventory();
+            updateAdminDashboard();
+            updateAdminSectionData('dashboard');
+            updateAdminSectionData('donors');
+            updateAdminSectionData('nid');
+        }
+        
+        // Update landing stats
+        function updateLandingStats() {
+            // Total donors
+            document.getElementById('totalDonorsCount').textContent = donorsData.length;
+            
+            // NID verified
+            const nidVerified = donorsData.filter(d => d.nidVerified).length;
+            document.getElementById('nidVerifiedCount').textContent = nidVerified;
+            
+            // Most common blood type
+            const bloodCounts = {};
+            donorsData.forEach(donor => {
+                bloodCounts[donor.bloodType] = (bloodCounts[donor.bloodType] || 0) + 1;
+            });
+            let mostCommon = 'O+';
+            let maxCount = 0;
+            Object.entries(bloodCounts).forEach(([type, count]) => {
+                if (count > maxCount) {
+                    maxCount = count;
+                    mostCommon = type;
+                }
+            });
+            document.getElementById('mostCommonBlood').textContent = mostCommon;
+            
+            // Recent donors (last 7 days)
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+            const recentDonors = donorsData.filter(donor => {
+                const regDate = new Date(donor.registrationDate);
+                return !isNaN(regDate) && regDate >= oneWeekAgo;
+            });
+            document.getElementById('recentDonors').textContent = recentDonors.length;
+        }
+        
+        // Update public dashboard
+        function updatePublicDashboard() {
+            // Stats
+            document.getElementById('publicTotalDonors').textContent = donorsData.length;
+            
+            const nidVerified = donorsData.filter(d => d.nidVerified).length;
+            document.getElementById('publicNidVerified').textContent = nidVerified;
+            
+            // Most common blood type
+            const bloodCounts = {};
+            donorsData.forEach(donor => {
+                bloodCounts[donor.bloodType] = (bloodCounts[donor.bloodType] || 0) + 1;
+            });
+            let mostCommon = 'O+';
+            let maxCount = 0;
+            Object.entries(bloodCounts).forEach(([type, count]) => {
+                if (count > maxCount) {
+                    maxCount = count;
+                    mostCommon = type;
+                }
+            });
+            document.getElementById('publicCommonBlood').textContent = mostCommon;
+            
+            // Recent donors
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+            const recentDonors = donorsData.filter(donor => {
+                const regDate = new Date(donor.registrationDate);
+                return !isNaN(regDate) && regDate >= oneWeekAgo;
+            });
+            document.getElementById('publicRecentDonors').textContent = recentDonors.length;
+            
+            // Donors table
+            const tableBody = document.getElementById('publicDonorsTable');
+            if (tableBody) {
+                tableBody.innerHTML = '';
+                
+                donorsData.slice(0, 50).forEach(donor => {
+                    // NID status
+                    let nidStatus = '';
+                    if (donor.nidVerified) {
+                        nidStatus = '<span style="color: var(--success); font-weight: 600;">ভেরিফাইড</span>';
+                    } else if (donor.nidNumber) {
+                        nidStatus = '<span style="color: var(--warning); font-weight: 600;">পেন্ডিং</span>';
+                    } else {
+                        nidStatus = '<span style="color: var(--gray); font-weight: 600;">নেই</span>';
+                    }
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><strong>${donor.firstName} ${donor.lastName}</strong></td>
+                        <td><span style="color: var(--primary); font-weight: 700;">${donor.bloodType}</span></td>
+                        <td>
+                            ${donor.phone}<br>
+                            <small style="color: var(--gray);">${donor.email}</small>
+                        </td>
+                        <td>${nidStatus}</td>
+                        <td>${donor.city}</td>
+                        <td>${donor.registrationDate}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            }
+        }
+        
+        // Update blood inventory
+        function updateBloodInventory() {
+            const inventoryGrid = document.getElementById('bloodInventoryGrid');
+            if (!inventoryGrid) return;
+            
+            inventoryGrid.innerHTML = '';
+            
+            // Count donors by blood type
+            const bloodCounts = {};
+            const bloodTypes = ['O+', 'O-', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-'];
+            
+            bloodTypes.forEach(type => {
+                bloodCounts[type] = donorsData.filter(d => d.bloodType === type).length;
+            });
+            
+            // Create blood cards
+            bloodTypes.forEach(type => {
+                const count = bloodCounts[type] || 0;
+                
+                // Determine status
+                let statusText, fillClass, fillWidth;
+                
+                if (count >= 10) {
+                    statusText = 'পর্যাপ্ত মজুদ';
+                    fillClass = 'high';
+                    fillWidth = '100%';
+                } else if (count >= 5) {
+                    statusText = 'মাঝারি মজুদ';
+                    fillClass = 'medium';
+                    fillWidth = '70%';
+                } else if (count >= 2) {
+                    statusText = 'স্বল্প মজুদ';
+                    fillClass = 'low';
+                    fillWidth = '40%';
+                } else if (count >= 1) {
+                    statusText = 'খুব কম মজুদ';
+                    fillClass = 'low';
+                    fillWidth = '20%';
+                } else {
+                    statusText = 'মজুদ নেই';
+                    fillClass = 'low';
+                    fillWidth = '5%';
+                }
+                
+                const card = document.createElement('div');
+                card.className = 'blood-card';
+                card.innerHTML = `
+                    <h3>${type}</h3>
+                    <p>${count} জন সক্রিয় রক্তদাতা</p>
+                    <div class="blood-level">
+                        <div class="blood-fill ${fillClass}" style="width: ${fillWidth};"></div>
+                    </div>
+                    <span style="display: inline-block; padding: 10px 25px; border-radius: 25px; font-weight: 800; font-size: 15px; background: ${fillClass === 'high' ? 'rgba(67, 160, 71, 0.1)' : fillClass === 'medium' ? 'rgba(255, 152, 0, 0.1)' : 'rgba(229, 57, 53, 0.1)'}; color: ${fillClass === 'high' ? 'var(--success)' : fillClass === 'medium' ? 'var(--warning)' : 'var(--danger)'};">${statusText}</span>
+                `;
+                inventoryGrid.appendChild(card);
+            });
+            
+            // Update urgent request message
+            const urgentMessage = document.getElementById('urgentRequestMessage');
+            if (urgentMessage) {
+                const lowStockTypes = bloodTypes.filter(type => (bloodCounts[type] || 0) < 2);
+                
+                if (lowStockTypes.length > 0) {
+                    urgentMessage.innerHTML = `
+                        <strong>জরুরি:</strong> নিম্নলিখিত রক্তের গ্রুপগুলোর মজুদ খুব কম:
+                        <strong>${lowStockTypes.join(', ')}</strong>। 
+                        দয়া করে রক্তদাতা হিসেবে নিবন্ধন করুন বা অন্যদেরকে উৎসাহিত করুন।
+                    `;
+                } else {
+                    urgentMessage.innerHTML = `
+                        <strong>ভালো খবর:</strong> সকল রক্তের গ্রুপে পর্যাপ্ত মজুদ আছে। 
+                        তবুও নিয়মিত রক্তদান চালিয়ে যান!
+                    `;
+                }
+            }
+        }
+        
+        // Update admin dashboard
+        function updateAdminDashboard() {
+            // Stats
+            document.getElementById('adminTotalDonors').textContent = donorsData.length;
+            
+            const nidVerified = donorsData.filter(d => d.nidVerified).length;
+            document.getElementById('adminNidVerified').textContent = nidVerified;
+            
+            // Most common blood type
+            const bloodCounts = {};
+            donorsData.forEach(donor => {
+                bloodCounts[donor.bloodType] = (bloodCounts[donor.bloodType] || 0) + 1;
+            });
+            let mostCommon = 'O+';
+            let maxCount = 0;
+            Object.entries(bloodCounts).forEach(([type, count]) => {
+                if (count > maxCount) {
+                    maxCount = count;
+                    mostCommon = type;
+                }
+            });
+            document.getElementById('adminMostCommonBlood').textContent = mostCommon;
+            
+            // Low stock count (less than 2 donors)
+            const lowStockTypes = Object.entries(bloodCounts).filter(([type, count]) => count < 2);
+            document.getElementById('adminLowStock').textContent = lowStockTypes.length;
+        }
+        
+        // Update admin section data
+        function updateAdminSectionData(section) {
+            switch(section) {
+                case 'dashboard':
+                    updateAdminRecentDonors();
+                    break;
+                case 'donors':
+                    updateAllDonorsTable();
+                    break;
+                case 'nid':
+                    updatePendingVerifications();
+                    break;
+            }
+        }
+        
+        // Update admin recent donors
+        function updateAdminRecentDonors() {
+            const tableBody = document.querySelector('#adminDonorsTable tbody');
+            if (!tableBody) return;
+            
+            tableBody.innerHTML = '';
+            
+            // Show only recent 10 donors
+            const recentDonors = donorsData.slice(0, 10);
+            
+            recentDonors.forEach(donor => {
+                // NID status
+                let nidStatus = '';
+                if (donor.nidVerified) {
+                    nidStatus = '<span style="color: var(--success); font-weight: 600;">ভেরিফাইড</span>';
+                } else if (donor.nidNumber) {
+                    nidStatus = '<span style="color: var(--warning); font-weight: 600;">পেন্ডিং</span>';
+                } else {
+                    nidStatus = '<span style="color: var(--gray); font-weight: 600;">নেই</span>';
+                }
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${donor.firstName} ${donor.lastName}</strong></td>
+                    <td><span style="color: var(--primary); font-weight: 700;">${donor.bloodType}</span></td>
+                    <td>
+                        ${donor.phone}<br>
+                        <small style="color: var(--gray);">${donor.email}</small>
+                    </td>
+                    <td>${nidStatus}</td>
+                    <td>${donor.city}</td>
+                    <td>
+                        <button class="btn" onclick="deleteDonor(${donor.id})" style="padding: 8px 15px; font-size: 13px; background: var(--danger);">
+                            <i class="fas fa-trash"></i> মুছুন
+                        </button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // Update all donors table
+        function updateAllDonorsTable() {
+            const tableBody = document.getElementById('allDonorsTable');
+            if (!tableBody) return;
+            
+            tableBody.innerHTML = '';
+            
+            donorsData.forEach(donor => {
+                // NID status
+                let nidStatus = '';
+                if (donor.nidVerified) {
+                    nidStatus = '<span style="color: var(--success); font-weight: 600;">ভেরিফাইড</span>';
+                } else if (donor.nidNumber) {
+                    nidStatus = '<span style="color: var(--warning); font-weight: 600;">পেন্ডিং</span>';
+                } else {
+                    nidStatus = '<span style="color: var(--gray); font-weight: 600;">নেই</span>';
+                }
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${donor.firstName} ${donor.lastName}</strong></td>
+                    <td><span style="color: var(--primary); font-weight: 700;">${donor.bloodType}</span></td>
+                    <td>${donor.email}</td>
+                    <td>${donor.phone}</td>
+                    <td>${nidStatus}</td>
+                    <td>${donor.registrationDate}</td>
+                    <td>
+                        <div style="display: flex; gap: 5px;">
+                            ${!donor.nidVerified && donor.nidNumber ? `
+                                <button class="btn" onclick="openNidVerificationModal(${donor.id}, '${donor.firstName} ${donor.lastName}')" style="padding: 6px 12px; font-size: 12px; background: var(--success);">
+                                    <i class="fas fa-id-card"></i> NID ভেরিফাই
+                                </button>
+                            ` : ''}
+                            <button class="btn" onclick="deleteDonor(${donor.id})" style="padding: 6px 12px; font-size: 12px; background: var(--danger);">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // Update pending verifications
+        function updatePendingVerifications() {
+            const tableBody = document.getElementById('pendingVerificationsTable');
+            if (!tableBody) return;
+            
+            tableBody.innerHTML = '';
+            
+            const pendingDonors = donorsData.filter(donor => donor.nidNumber && !donor.nidVerified);
+            
+            if (pendingDonors.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 40px; color: var(--gray);">
+                            কোন পেন্ডিং ভেরিফিকেশন নেই
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            pendingDonors.forEach(donor => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${donor.firstName} ${donor.lastName}</strong></td>
+                    <td><span style="color: var(--primary); font-weight: 700;">${donor.bloodType}</span></td>
+                    <td>${donor.nidNumber || 'N/A'}</td>
+                    <td>${donor.registrationDate}</td>
+                    <td>
+                        <button class="btn" onclick="openNidVerificationModal(${donor.id}, '${donor.firstName} ${donor.lastName}')" style="background: var(--success);">
+                            <i class="fas fa-id-card"></i> ভেরিফাই করুন
+                        </button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // Register donor
+        function registerDonor() {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const dob = document.getElementById('dob').value;
+            const bloodType = document.getElementById('bloodType').value;
+            const gender = document.getElementById('gender').value;
+            const address = document.getElementById('address').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const zipCode = document.getElementById('zipCode').value.trim();
+            const nidNumber = document.getElementById('nidNumber').value.trim();
+            
+            // Validation
+            if (!firstName || !lastName || !email || !phone || !dob || !bloodType || !gender || !address || !city || !zipCode) {
+                alert('দয়া করে সকল আবশ্যক তথ্য প্রদান করুন');
+                return;
+            }
+            
+            // Check if email already exists
+            if (donorsData.some(donor => donor.email === email)) {
+                alert('এই ইমেইলটি আগেই নিবন্ধিত আছে');
+                return;
+            }
+            
+            // Create new donor
+            const newDonor = {
+                id: Date.now(),
+                firstName,
+                lastName,
+                email,
+                phone,
+                dob,
+                bloodType,
+                gender,
+                address,
+                city,
+                zipCode,
+                nidNumber: nidNumber || null,
+                nidVerified: false,
+                nidData: null,
+                registrationDate: new Date().toLocaleDateString('bn-BD')
+            };
+            
+            // Add to data
+            donorsData.unshift(newDonor);
+            saveToLocalStorage();
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            document.getElementById('donorRegistrationForm').reset();
+            
+            // Update all data
+            updateAllData();
+            
+            // Hide success message after 3 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+                showPage('landing-page');
+            }, 2000);
+            
+            alert('রক্তদাতা হিসেবে সফলভাবে নিবন্ধিত হয়েছেন!');
+        }
+        
+        // Open NID verification modal
+        function openNidVerificationModal(donorId, donorName) {
+            currentVerificationDonor = { id: donorId, name: donorName };
+            document.getElementById('selectedDonorName').value = donorName;
+            document.getElementById('nidVerificationModal').style.display = 'flex';
+        }
+        
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            
+            if (modalId === 'nidVerificationModal') {
+                currentVerificationDonor = null;
+                document.getElementById('verificationNidNumber').value = '';
+                document.getElementById('verificationFullName').value = '';
+                document.getElementById('verificationDob').value = '';
+                document.getElementById('verificationFatherName').value = '';
+                document.getElementById('verificationMotherName').value = '';
+                document.getElementById('verificationAddress').value = '';
+            } else if (modalId === 'deleteConfirmationModal') {
+                currentDonorId = null;
+            }
+        }
+        
+        // Submit NID verification
+        function submitNidVerification() {
+            if (!currentVerificationDonor) {
+                alert('রক্তদাতা নির্বাচন করুন');
+                return;
+            }
+            
+            const nidNumber = document.getElementById('verificationNidNumber').value.trim();
+            const fullName = document.getElementById('verificationFullName').value.trim();
+            const dob = document.getElementById('verificationDob').value;
+            const fatherName = document.getElementById('verificationFatherName').value.trim();
+            const motherName = document.getElementById('verificationMotherName').value.trim();
+            const address = document.getElementById('verificationAddress').value.trim();
+            
+            // Validate NID number
+            if (!nidNumber || !/^\d{17}$/.test(nidNumber)) {
+                alert('সঠিক ১৭ ডিজিটের NID নম্বর দিন');
+                return;
+            }
+            
+            if (!fullName || !dob || !fatherName || !motherName || !address) {
+                alert('দয়া করে সকল তথ্য প্রদান করুন');
+                return;
+            }
+            
+            // Find donor and update
+            const donorIndex = donorsData.findIndex(d => d.id === currentVerificationDonor.id);
+            
+            if (donorIndex !== -1) {
+                donorsData[donorIndex].nidVerified = true;
+                donorsData[donorIndex].nidData = {
+                    fullName,
+                    fatherName,
+                    motherName,
+                    permanentAddress: address,
+                    dob,
+                    verifiedAt: new Date().toISOString()
+                };
+                
+                saveToLocalStorage();
+                updateAllData();
+                closeModal('nidVerificationModal');
+                
+                alert('NID সফলভাবে ভেরিফাইড হয়েছে!');
+            } else {
+                alert('রক্তদাতা খুঁজে পাওয়া যায়নি');
+            }
+        }
+        
+        // Delete donor
+        function deleteDonor(donorId) {
+            currentDonorId = donorId;
+            const donor = donorsData.find(d => d.id === donorId);
+            
+            if (donor) {
+                document.getElementById('deleteMessage').innerHTML = `
+                    আপনি কি নিশ্চিত যে <strong>${donor.firstName} ${donor.lastName}</strong> কে মুছে ফেলতে চান?
+                `;
+                document.getElementById('deleteConfirmationModal').style.display = 'flex';
+            }
+        }
+        
+        // Confirm delete
+        function confirmDelete() {
+            if (!currentDonorId) return;
+            
+            const donorIndex = donorsData.findIndex(d => d.id === currentDonorId);
+            
+            if (donorIndex !== -1) {
+                donorsData.splice(donorIndex, 1);
+                saveToLocalStorage();
+                updateAllData();
+                closeModal('deleteConfirmationModal');
+                alert('রক্তদাতা সফলভাবে মুছে ফেলা হয়েছে');
+            }
+        }
+        
+        // Export to CSV
+        function exportToCSV() {
+            if (donorsData.length === 0) {
+                alert('এক্সপোর্ট করার জন্য কোন ডেটা নেই');
+                return;
+            }
+            
+            // CSV headers
+            let csvContent = "নাম,রক্তের গ্রুপ,ইমেইল,ফোন,NID নম্বর,NID স্ট্যাটাস,শহর,নিবন্ধন তারিখ\n";
+            
+            // CSV rows
+            donorsData.forEach(donor => {
+                const row = [
+                    `"${donor.firstName} ${donor.lastName}"`,
+                    donor.bloodType,
+                    donor.email,
+                    donor.phone,
+                    donor.nidNumber || 'N/A',
+                    donor.nidVerified ? 'ভেরিফাইড' : donor.nidNumber ? 'পেন্ডিং' : 'নেই',
+                    donor.city,
+                    donor.registrationDate
+                ];
+                csvContent += row.join(',') + '\n';
+            });
+            
+            // Create download link
+            const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `রক্তদাতা_তালিকা_${new Date().toLocaleDateString('bn-BD')}.csv`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            alert('CSV ফাইল ডাউনলোড শুরু হয়েছে');
+        }
+        
+        // Close modals when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                event.target.style.display = 'none';
+                if (event.target.id === 'nidVerificationModal') {
+                    currentVerificationDonor = null;
+                } else if (event.target.id === 'deleteConfirmationModal') {
+                    currentDonorId = null;
+                }
+            }
+        });
+        
+        // Prevent form submission on Enter key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' && event.target.tagName !== 'TEXTAREA') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
