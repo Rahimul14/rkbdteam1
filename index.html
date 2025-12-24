@@ -2406,8 +2406,8 @@
             }
             
             // NID validation
-            if (!/^\d{17}$/.test(nidNumber)) {
-                showNotification('সঠিক ১৭ ডিজিটের NID নম্বর দিন', 'error');
+            if (!/^\d{10}$/.test(nidNumber)) {
+                showNotification('সঠিক ১০ ডিজিটের NID নম্বর দিন', 'error');
                 return;
             }
             
